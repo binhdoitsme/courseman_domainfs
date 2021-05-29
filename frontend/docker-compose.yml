@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  frontend: 
+    container_name: "domainfs_frontend"
+    image: "domainfs_frontend"
+    networks:
+      - domainfs_network
+    restart: "no"
+    tty: true
+    ports:
+      - 3000:3000
+  
+networks:
+  domainfs_network: {}

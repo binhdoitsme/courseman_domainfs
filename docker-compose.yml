@@ -1,0 +1,25 @@
+version: "3.9"
+
+services: 
+  backend:
+    container_name: "courseman_be"
+    image: "courseman_backend"
+    restart: "no"
+    tty: true
+    ports:
+      - 8080:8080
+    networks:
+      - courseman
+  frontend: 
+    container_name: "courseman_fe"
+    image: "courseman_frontend"
+    networks:
+      - courseman
+    restart: "no"
+    tty: true
+    ports:
+      - 3000:3000
+      - 80:3000
+
+networks:
+  courseman: {}

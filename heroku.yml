@@ -1,0 +1,7 @@
+build:
+  docker:
+    backend: backend/Dockerfile
+    frontend: frontend/Dockerfile
+run:
+  backend: cd /app && mvn spring-boot:run
+  frontend: cd /app && npm start
